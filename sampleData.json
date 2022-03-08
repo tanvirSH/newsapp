@@ -1,0 +1,58 @@
+{
+  "status": "ok",
+  "totalResults": 4,
+  "articles": [
+    {
+      "source": {
+        "id": "news24",
+        "name": "News24"
+      },
+      "author": "Lloyd Burnard",
+      "title": "From cleaning boots to a maiden Test century: Why new Proteas star Erwee is 'a coach's dream'",
+      "description": "Sarel Erwee has had to be patient, waiting for his opportunity to play Test cricket, but he is now set for an extended run at the top of the South African order.",
+      "url": "https://www.news24.com/sport/Cricket/Proteas/from-cleaning-boots-to-a-maiden-test-century-why-new-proteas-star-erwee-is-a-coachs-dream-20220303",
+      "urlToImage": "https://cdn.24.co.za/files/Cms/General/d/2588/5135d779c5b0486a86437b2cf229c600.jpg",
+      "publishedAt": "2022-03-03T20:02:16+00:00",
+      "content": "<ul><li>Proteas coach Mark Boucher is thrilled for Sarel Erwee, who took his Test chance against New Zealand.</li><li>\"Good things happen to good people,\" Boucher said. </li><li>Erwee carded a maiden… [+2628 chars]"
+    },
+    {
+      "source": {
+        "id": "abc-news-au",
+        "name": "ABC News (AU)"
+      },
+      "author": "Avani Dias, Som Patidar",
+      "title": "Australia's cricket team is in Pakistan for the first time in 24 years. Here's how local authorities plan to keep them safe",
+      "description": "With Australia's cricket team in Pakistan for the first time in decades, the country is closing roads, surrounding their bus with armed troops and covering them from above with helicopters to keep them safe.",
+      "url": "http://www.abc.net.au/news/2022-03-04/australian-cricket-team-in-pakistan/100877886",
+      "urlToImage": "https://live-production.wcms.abc-cdn.net.au/6c700d6798666e965a66478fc7bccb40?impolicy=wcms_crop_resize&cropH=1152&cropW=2048&xPos=0&yPos=123&width=862&height=485",
+      "publishedAt": "2022-03-03T19:00:29Z",
+      "content": "In Pakistan, cricket is practically a religion. \r\nThe nation has bred some of the world's best players, Prime Minister Imran Khan was a World Cup-winning captain and generations of kids play the game… [+4916 chars]"
+    },
+    {
+      "source": {
+        "id": "espn-cric-info",
+        "name": "ESPN Cric Info"
+      },
+      "author": null,
+      "title": "PCB hands Umar Akmal three-year ban from all cricket | ESPNcricinfo.com",
+      "description": "Penalty after the batsman pleaded guilty to not reporting corrupt approaches | ESPNcricinfo.com",
+      "url": "http://www.espncricinfo.com/story/_/id/29103103/pcb-hands-umar-akmal-three-year-ban-all-cricket",
+      "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg",
+      "publishedAt": "2020-04-27T11:41:47Z",
+      "content": "Umar Akmal's troubled cricket career has hit its biggest roadblock yet, with the PCB handing him a ban from all representative cricket for three years after he pleaded guilty of failing to report det… [+1506 chars]"
+    },
+    {
+      "source": {
+        "id": "espn-cric-info",
+        "name": "ESPN Cric Info"
+      },
+      "author": null,
+      "title": "What we learned from watching the 1992 World Cup final in full again | ESPNcricinfo.com",
+      "description": "Wides, lbw calls, swing - plenty of things were different in white-ball cricket back then | ESPNcricinfo.com",
+      "url": "http://www.espncricinfo.com/story/_/id/28970907/learned-watching-1992-world-cup-final-full-again",
+      "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg",
+      "publishedAt": "2020-03-30T15:26:05Z",
+      "content": "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]"
+    }
+  ]
+}
