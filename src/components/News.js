@@ -49,13 +49,6 @@ export class News extends Component {
               <NewsItem  title={element.title? element.title: ''} description={element.description? element.description:''} imgUrl={element.urlToImage? element.urlToImage:''} url={element.url}/>
           </div> )
           })}
-              
-            {/* <div className="col-md-4">
-                <NewsItem  title={'HelloWorld'} description={'HelloWorld'} />
-            </div>   
-            <div className="col-md-4">
-                <NewsItem  title={'HelloWorld'} description={'HelloWorld'} />
-            </div>    */}
         </div>
         <div className="container d-flex justify-content-between">
           <button disabled={this.state.page <= 1} type="button" className="btn btn-dark" onClick={this.handlePrevious}>&larr; Prev</button>
