@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import News from './components/News';
-import { Route, Routes } from 'react-router-dom';
 
 export default class App extends Component {
   constructor() {

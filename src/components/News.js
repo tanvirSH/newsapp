@@ -28,42 +28,51 @@ export class News extends Component {
   }
 
   fetchData = async () => {
-    let data = await fetch(`https://newsapi.org/v2/top-headlines?category=${this.props.category}&country=${this.props.country}&apiKey=49b12ba480594baa99a5b73605aa6b8e&page=${this.state.page}&pageSize=${this.state.pageSize} `);
+    let url = `https://newsapi.org/v2/top-headlines?category=${this.props.category}&country=${this.props.country}&apiKey=49b12ba480594baa99a5b73605aa6b8e&page=${this.state.page}&pageSize=${this.state.pageSize}`;
+    let data = await fetch(url);
     let parsedata = await data.json();
     this.setState({articles: parsedata.articles, totalPages: Math.ceil(parsedata.totalResults/this.state.pageSize), loading: false});
 
   }
+
+  handlePrevious = async () => {
+    --this.state.page;
+    this.fetchData();
+  };
+
+  handleNext = async () => {
+    ++this.state.page;
+    this.fetchData();
+  };
 
   async componentDidMount() {
     console.log('CDM');
     this.fetchData();
   }
 
-  handlePrevious = async () => {
-    console.log(this.state.page);
-    this.setState({page: this.state.page - 1});
-    await this.fetchData();
-  };
-
-  handleNext = async () => {
-    console.log(this.state.page);
-    this.setState({page: this.state.page + 1});
-    await this.fetchData();
-  };
-
   render() {
     return (
       <div className="container my-3">
-        { this.state.loading && <Loader />}
+
+         { /* loadder */}
+         { this.state.loading && <Loader />}
+
+         { /* content */}
         { !this.state.loading &&
         (<>
+
+        {/* Header section */}
         <div className="container d-flex justify-content-center">
-        <h3>News World - Top Headlines - {this.props.category}</h3>
+        <h3>News World - Top Headlines - <span className="headlinne-category">{this.props.category}</span></h3>
         </div>
+
+        {/* next prev button */}
         <div className="container d-flex justify-content-between">
           <button disabled={this.state.page <= 1} type="button" className="btn btn-dark btn-sm" onClick={this.handlePrevious}>&larr; Prev</button>
           <button disabled={this.state.page >= this.state.totalPages} type="button" className="btn btn-dark btn-sm" onClick={this.handleNext}>Next &rarr;</button>
         </div>
+
+        {/* NewsItem component */}
         <div className="row">
           {this.state.articles.map((element, index) =>{
             return (<div className="col-md-4 my-3" key={index}>
@@ -71,6 +80,8 @@ export class News extends Component {
           </div> )
           })}
         </div>
+
+        {/* next prev button */}
         <div className="container d-flex justify-content-between">
           <button disabled={this.state.page <= 1} type="button" className="btn btn-dark btn-sm" onClick={this.handlePrevious}>&larr; Prev</button>
           <button disabled={this.state.page >= this.state.totalPages} type="button" className="btn btn-dark btn-sm" onClick={this.handleNext}>Next &rarr;</button>
