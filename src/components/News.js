@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Loader from "./Loader";
-import NewsItem from "./NewsItem";
+import NewsItem from "./NewsItem";  
 import PropTypes from "prop-types";
-import InfiniteScroll from "react-infinite-scroll-component";
+
+import InfiniteScroll from "react-infinite-scroll-component"; // Infinite scroll
 
 export class News extends Component {
   static defaultProps = {
@@ -23,7 +24,7 @@ export class News extends Component {
       totalPages: 0,
       page: 1,
       pageSize: 9,
-      totalResults: 0,
+      totalResults: 0
     };
     document.title = `${
       this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)
@@ -31,15 +32,19 @@ export class News extends Component {
   }
 
   fetchData = async () => {
+    this.props.setProgress(10);
     let url = `https://newsapi.org/v2/top-headlines?category=${this.props.category}&country=${this.props.country}&apiKey=49b12ba480594baa99a5b73605aa6b8e&page=${this.state.page}&pageSize=${this.state.pageSize}`;
     let data = await fetch(url);
+    this.props.setProgress(40);
     let parsedata = await data.json();
+    this.props.setProgress(70);
     this.setState({
       articles: [...this.state.articles, ...parsedata.articles],
       totalPages: Math.ceil(parsedata.totalResults / this.state.pageSize),
       loading: false,
       totalResults: parsedata.totalResults,
     });
+    this.props.setProgress(100);
   };
 
   handlePrevious = async () => {
