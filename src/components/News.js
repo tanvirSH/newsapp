@@ -25,7 +25,7 @@ export class News extends Component {
       page:1,
       pageSize:9
     }
-    document.title = `${this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)} - News App`;
+    document.title = `${this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)} - News World!`;
   }
 
   fetchData = async () => {
@@ -64,7 +64,7 @@ export class News extends Component {
 
         {/* Header section */}
         <div className="container d-flex justify-content-center">
-        <h3>News World - Top Headlines - <span className="headlinne-category">{this.props.category}</span></h3>
+        <h3>News World - Top <span className="headlinne-category">{this.props.category}</span> Headlines!</h3>
         </div>
 
         {/* next prev button */}
