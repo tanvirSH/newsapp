@@ -15,6 +15,7 @@ export default class App extends Component {
       country: "in",
       progress: 0,
     };
+    this.apiKey = process.env.REACT_APP_NEWS_API;
   }
   setProgress = (progress) => {
     this.setState({ progress: progress });
@@ -29,7 +30,8 @@ export default class App extends Component {
             path="/"
             element={
               <News
-                setProgress={this.setProgress}
+                setProgress={this.setProgress} 
+                apiKey={this.apiKey}
                 key="home"
                 country={this.state.country}
                 category={"general"}
@@ -40,7 +42,8 @@ export default class App extends Component {
             path="/business"
             element={
               <News
-                setProgress={this.setProgress}
+                setProgress={this.setProgress} 
+                apiKey={this.apiKey}
                 key="business"
                 country={this.state.country}
                 category={"business"}
@@ -51,7 +54,8 @@ export default class App extends Component {
             path="/entertainment"
             element={
               <News
-                setProgress={this.setProgress}
+                setProgress={this.setProgress} 
+                apiKey={this.apiKey}
                 key="entertainment"
                 country={this.state.country}
                 category={"entertainment"}
@@ -63,7 +67,8 @@ export default class App extends Component {
             path="/health"
             element={
               <News
-                setProgress={this.setProgress}
+                setProgress={this.setProgress} 
+                apiKey={this.apiKey}
                 key="health"
                 country={this.state.country}
                 category={"health"}
@@ -74,7 +79,8 @@ export default class App extends Component {
             path="/sports"
             element={
               <News
-                setProgress={this.setProgress}
+                setProgress={this.setProgress} 
+                apiKey={this.apiKey}
                 key="sports"
                 country={this.state.country}
                 category={"sports"}
@@ -85,7 +91,8 @@ export default class App extends Component {
             path="/technology"
             element={
               <News
-                setProgress={this.setProgress}
+                setProgress={this.setProgress} 
+                apiKey={this.apiKey}
                 key="technology"
                 country={this.state.country}
                 category={"technology"}
