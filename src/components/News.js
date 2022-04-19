@@ -25,6 +25,7 @@ export class News extends Component {
       page:1,
       pageSize:9
     }
+    document.title = `${this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)} - News App`;
   }
 
   fetchData = async () => {
